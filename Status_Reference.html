@@ -2893,9 +2893,12 @@ the following strings: "adjust", "fine".</li>
 <a href="Config_Reference.html#controller_fan">controller_fan some_name</a>
 objects:</p>
 <ul>
-<li><code>speed</code>: The fan speed as a float between 0.0 and 1.0.</li>
+<li><code>value</code>: The fan speed value as a float between 0.0 and 1.0.</li>
+<li><code>power</code>: The fan power as a float between 0|<code>min_power</code> and 1.0|<code>max_power</code>.</li>
 <li><code>rpm</code>: The measured fan speed in rotations per minute if the fan has
-  a tachometer_pin defined.</li>
+  a tachometer_pin defined.
+deprecated objects (for UI compatibility only): </li>
+<li><code>speed</code>: The fan speed as a float between 0.0 and <code>max_power</code>. </li>
 </ul>
 <h2 id="filament_switch_sensor">filament_switch_sensor<a class="headerlink" href="#filament_switch_sensor" title="Permanent link">&para;</a></h2>
 <p>The following information is available in
@@ -3309,6 +3312,13 @@ on a cartesian, hybrid_corexy or hybrid_corexz robot</p>
 <ul>
 <li><code>curr_lane</code>: The lane the selector is currently positioned at.</li>
 <li><code>active_lane</code>: The lane currently loaded in the toolhead.</li>
+<li><code>next_lane</code>: The next lane to load to the toolhead if a toolchange
+  is in progress.</li>
+<li><code>next_tool</code>: The next tool to load to the toolhead if a toolchange
+  is in progress (if a tool number was specified for the toolchange).</li>
+<li><code>tool_map</code>: An array of integers listing the assigned tool for each
+  lane. The tool number for a specified lane can be accessed with
+  <code>tool_map[&lt;lane index&gt;]</code>.</li>
 <li><code>selector_homed</code>: Whether or not the selector axis is homed.</li>
 </ul>
 <h2 id="virtual_sdcard">virtual_sdcard<a class="headerlink" href="#virtual_sdcard" title="Permanent link">&para;</a></h2>

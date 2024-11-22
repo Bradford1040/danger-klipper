@@ -372,6 +372,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#enhanced-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#new-klipper-modules" class="md-nav__link">
     <span class="md-ellipsis">
       New Klipper Modules
@@ -1905,6 +1914,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#enhanced-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#new-klipper-modules" class="md-nav__link">
     <span class="md-ellipsis">
       New Klipper Modules
@@ -1992,6 +2010,10 @@
 <li><a href="Config_Reference.html#virtual_sdcard"><code>[virtual_sdcard] with_subdirs</code></a> enables scanning of subdirectories for .gcode files, for the menu and M20/M23 commands</li>
 <li><a href="Config_Reference.html#firmware_retraction"><code>[firmware_retraction] z_hop_height</code></a> adds an automatic z hop when using firmware retraction</li>
 </ul>
+<h2 id="enhanced-behavior">Enhanced behavior<a class="headerlink" href="#enhanced-behavior" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="CANBUS.html#️-finding-the-canbus_uuid-for-new-micro-controllers"><code>canbus_query.py</code></a> now responds with all Danger-Klipper devices, even after they've been assigned a node_id.</li>
+</ul>
 <h2 id="new-klipper-modules">New Klipper Modules<a class="headerlink" href="#new-klipper-modules" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="G-Code_Shell_Command.html">gcode_shell_command</a> - Execute linux commands and scripts from within Klipper</li>
@@ -2032,6 +2054,7 @@
 <li>The jinja <code>do</code> extension has been enabled. You can now call functions in your macros without resorting to dirty hacks: <code>{% do array.append(5) %}</code></li>
 <li>The python <a href="https://docs.python.org/3/library/math.html"><code>math</code></a> library is available to macros. <code>{math.sin(math.pi * variable)}</code> and more!</li>
 <li>New <a href="G-Codes.html#reload_gcode_macros"><code>RELOAD_GCODE_MACROS</code></a> G-Code command to reload <code>[gcode_macro]</code> templates without requiring a restart.</li>
+<li>G-Code Macros can be written in Python. Read more <a href="Command_Templates.html">here</a></li>
 </ul>
 <h2 id="plugins"><a href="./Plugins.md">Plugins</a><a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
 <p>Extend your Danger Klipper installation with custom plugins.</p>
